@@ -3,254 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rewards Program - Trader Joe's Gift Card Opportunity</title>
+    <title>Exclusive Costco Offer - $750 Gift Card</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Caprasimo&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --tj-red: #cc2027;
-            --tj-green: #2d5a3c;
-            --tj-cream: #fdfdfb;
-            --tj-dark: #1a3a2a;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8faf8;
-            color: var(--tj-dark);
-            margin: 0;
-            padding: 0;
+            background-color: #f3f4f6;
+            background-image: linear-gradient(rgba(243, 244, 246, 0.85), rgba(243, 244, 246, 0.85)), url('https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-        .brand-font {
-            font-family: 'Caprasimo', cursive;
-        }
-        .hero-gradient {
-            background: radial-gradient(circle at top right, #f0f4ef, #ffffff);
-        }
-        .offer-card {
-            border: 1px solid rgba(45, 90, 60, 0.08);
-            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
-        }
-        .offer-card:hover {
-            transform: translateY(-4px);
-        }
-        .cta-button {
-            background-color: var(--tj-green);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .cta-button:hover {
-            background-color: #1e3d28;
-            transform: scale(1.02);
-            box-shadow: 0 10px 20px -5px rgba(45, 90, 60, 0.3);
-        }
-        .step-pill {
-            background-color: var(--tj-green);
+
+        .costco-blue { background-color: #005da4; }
+        .costco-red { background-color: #e31837; }
+        .text-costco-blue { color: #005da4; }
+        .text-costco-red { color: #e31837; }
+        
+        .step-number {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #005da4;
             color: white;
+            font-weight: 800;
+            font-size: 14px;
+            flex-shrink: 0;
         }
-        /* Custom "Hand-drawn" borders for that TJ look */
-        .tj-border {
-            border: 2px solid var(--tj-green);
-            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+        .must-badge {
+            background-color: #ffc107;
+            color: black;
+            font-size: 10px;
+            font-weight: 900;
+            padding: 2px 6px;
+            border-radius: 6px;
+            margin-left: 8px;
+            text-transform: uppercase;
         }
-        .gift-card-bg {
-            background: linear-gradient(135deg, #ffffff 0%, #f1f5f1 100%);
-            border: 1px solid #e2e8f0;
+
+        .offer-badge {
+            background-color: #005da4;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 13px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-emerald-50 py-4 px-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-[#cc2027] rounded-full flex items-center justify-center shadow-sm">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                </div>
-                <span class="text-xl font-black tracking-tighter uppercase brand-font text-[#cc2027]">Trader Joe's</span>
-            </div>
-            <div class="hidden sm:flex items-center space-x-2">
-                <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                <span class="text-[10px] md:text-xs font-bold text-emerald-800 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full">Member Rewards Program 2026</span>
+    <!-- Header -->
+    <header class="bg-white py-4 shadow-sm border-b">
+        <div class="container mx-auto px-4 flex justify-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-costco-blue text-xl sm:text-2xl font-black italic tracking-tighter">COSTCO</span>
+                <span class="text-[10px] uppercase tracking-widest text-costco-red font-bold border-l pl-2 border-gray-200">Wholesale</span>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Main Content -->
-    <main class="flex-grow max-w-6xl mx-auto w-full px-4 py-12 md:py-20">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+    <main class="flex-grow container mx-auto px-4 py-8 sm:py-12 max-w-lg">
+        
+        <div class="text-center mb-6">
+            <h1 class="text-5xl sm:text-6xl font-black text-costco-blue tracking-tighter mb-1">$750</h1>
+            <p class="text-gray-600 font-bold uppercase tracking-[0.2em] text-xs sm:text-sm">Costco Gift Card</p>
+        </div>
+
+        <!-- Status Badge -->
+        <div class="text-center mb-8">
+            <div class="offer-badge text-xs sm:text-sm">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span>Active Promotion Available</span>
+            </div>
+        </div>
+
+        <!-- Steps Card -->
+        <div class="bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl p-6 sm:p-8 mb-8 border border-gray-100">
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="flex items-center space-x-4">
+                    <div class="step-number">1</div>
+                    <span class="font-bold text-gray-800 text-base sm:text-lg">Click The Button Below</span>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex items-center space-x-4">
+                    <div class="step-number">2</div>
+                    <span class="font-bold text-gray-800 text-base sm:text-lg">Enter Your Basic Info</span>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex items-center space-x-4">
+                    <div class="step-number">3</div>
+                    <div class="flex items-center">
+                        <span class="font-bold text-gray-800 text-base sm:text-lg">Complete 3 to 5 Deals</span>
+                        <span class="must-badge">MUST</span>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="flex items-center space-x-4">
+                    <div class="step-number">4</div>
+                    <span class="font-bold text-gray-800 text-base sm:text-lg">Claim Your Reward</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center px-2">
+            <a href="https://giftclick.org/aff_c?offer_id=941&aff_id=165890" class="block w-full py-5 px-6 sm:px-8 costco-blue text-white font-black text-lg sm:text-xl rounded-full shadow-xl hover:opacity-95 transition-all transform hover:scale-[1.02] active:scale-[0.98] uppercase tracking-wide flex items-center justify-center space-x-3">
+                <span>Claim Your Gift Card</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
             
-            <!-- Left Side: Visual & Headlines -->
-            <div class="lg:col-span-7 space-y-10">
-                
-                <!-- Improved Gift Card Visual -->
-                <div class="gift-card-bg offer-card rounded-[2rem] p-8 relative overflow-hidden aspect-[1.58/1] flex flex-col justify-between">
-                    <!-- Text Layer -->
-                    <div class="relative z-10">
-                        <div class="brand-font text-4xl md:text-6xl text-[#cc2027] leading-none mb-2">
-                            Trader<br>Joe's
-                        </div>
-                        <div class="inline-block bg-[#2d5a3c] text-white px-5 py-2 text-2xl md:text-3xl font-black rounded-lg shadow-lg">
-                            $750.00
-                        </div>
-                        <p class="mt-4 text-emerald-900/60 font-bold uppercase tracking-widest text-sm">Official Gift Card</p>
-                    </div>
-
-                    <!-- Decorative Illustration (Hand-drawn Grocery Icons) -->
-                    <div class="absolute bottom-[-10%] right-[-5%] w-1/2 opacity-20 pointer-events-none">
-                         <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M50 150 L150 150 L160 50 L40 50 Z" fill="#2d5a3c" />
-                            <circle cx="100" cy="100" r="30" stroke="white" stroke-width="4" />
-                            <path d="M85 100 L115 100 M100 85 L100 115" stroke="white" stroke-width="4" />
-                         </svg>
-                    </div>
-                    
-                    <div class="absolute top-8 right-8 text-emerald-800/20 brand-font text-8xl select-none">TJ</div>
+            <!-- Claimed Count -->
+            <div class="mt-4 flex items-center justify-center space-x-2 text-costco-blue">
+                <div class="w-5 h-5 rounded-full border-2 border-costco-blue flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7" />
+                    </svg>
                 </div>
-
-                <div class="space-y-6">
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-emerald-950 leading-[1.15]">
-                        Love Shopping at Your <span class="text-[#cc2027]">Neighborhood</span> Store?
-                    </h1>
-                    <p class="text-xl text-emerald-900/70 leading-relaxed max-w-2xl">
-                        We are currently selecting a limited group of frequent shoppers to join our <span class="font-bold text-emerald-900">2026 Customer Insights Program</span>. Share your feedback and get rewarded for your favorite organic groceries.
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-4 pt-4">
-                        <div class="flex items-center space-x-2 bg-white border border-emerald-100 rounded-full px-4 py-2 shadow-sm">
-                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-sm font-bold text-emerald-800">Verified Offer</span>
-                        </div>
-                        <div class="flex items-center space-x-2 bg-white border border-emerald-100 rounded-full px-4 py-2 shadow-sm">
-                            <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
-                            <span class="text-sm font-bold text-emerald-800">4,200+ Claimed</span>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-[11px] sm:text-[12px] font-bold uppercase tracking-widest">3,194 people claimed today</p>
             </div>
-
-            <!-- Right Side: Instructions & CTA -->
-            <div class="lg:col-span-5">
-                <div class="bg-white rounded-[2.5rem] p-8 md:p-10 offer-card border-t-8 border-emerald-700">
-                    <h3 class="text-2xl font-black mb-8 text-emerald-950 uppercase tracking-tight">How to participate</h3>
-                    
-                    <div class="space-y-8">
-                        <div class="group flex items-start">
-                            <div class="step-pill w-10 h-10 rounded-2xl flex items-center justify-center flex-shrink-0 font-bold text-lg shadow-md group-hover:scale-110 transition-transform">1</div>
-                            <div class="ml-5">
-                                <h4 class="font-bold text-emerald-950 text-lg">Click "Claim Reward"</h4>
-                                <p class="text-emerald-900/60 leading-tight mt-1">Visit our secure verification portal to start your application.</p>
-                            </div>
-                        </div>
-
-                        <div class="group flex items-start">
-                            <div class="step-pill w-10 h-10 rounded-2xl flex items-center justify-center flex-shrink-0 font-bold text-lg shadow-md group-hover:scale-110 transition-transform">2</div>
-                            <div class="ml-5">
-                                <h4 class="font-bold text-emerald-950 text-lg">Quick Survey</h4>
-                                <p class="text-emerald-900/60 leading-tight mt-1">Answer 5 simple questions about your shopping habits.</p>
-                            </div>
-                        </div>
-
-                        <div class="group flex items-start">
-                            <div class="step-pill w-10 h-10 rounded-2xl flex items-center justify-center flex-shrink-0 font-bold text-lg shadow-md group-hover:scale-110 transition-transform">3</div>
-                            <div class="ml-5">
-                                <h4 class="font-bold text-emerald-950 text-lg">Complete Deals</h4>
-                                <p class="text-emerald-900/60 leading-tight mt-1">Complete a few required promotional tasks to qualify.</p>
-                            </div>
-                        </div>
-
-                        <div class="group flex items-start">
-                            <div class="step-pill w-10 h-10 rounded-2xl flex items-center justify-center flex-shrink-0 font-bold text-lg shadow-md group-hover:scale-110 transition-transform">4</div>
-                            <div class="ml-5">
-                                <h4 class="font-bold text-emerald-950 text-lg">Verification</h4>
-                                <p class="text-emerald-900/60 leading-tight mt-1">Your $750 reward will be sent via email after final review.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-12">
-                        <a href="https://linkthem.net/aff_c?offer_id=854&aff_id=165890" class="cta-button w-full block text-center text-white font-black text-xl py-6 rounded-3xl uppercase tracking-widest shadow-xl">
-                            Claim My $750 Reward
-                        </a>
-                        <div class="mt-6 flex flex-col items-center space-y-4">
-                            <div class="flex -space-x-3">
-                                <div class="w-10 h-10 rounded-full border-2 border-white bg-emerald-100 flex items-center justify-center text-xs font-bold">JD</div>
-                                <div class="w-10 h-10 rounded-full border-2 border-white bg-blue-100 flex items-center justify-center text-xs font-bold">SM</div>
-                                <div class="w-10 h-10 rounded-full border-2 border-white bg-orange-100 flex items-center justify-center text-xs font-bold">RL</div>
-                                <div class="w-10 h-10 rounded-full border-2 border-white bg-emerald-800 text-white flex items-center justify-center text-xs font-bold">+12</div>
-                            </div>
-                            <p class="text-[11px] text-center text-emerald-900/40 font-medium px-4">
-                                Members-only invitation. No purchase necessary to enter. Must be 18+ and a US resident. Terms and conditions apply.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            
+            <p class="mt-8 text-[10px] text-gray-400 uppercase tracking-widest leading-relaxed">
+                Limited time offer. Terms and conditions apply.
+            </p>
         </div>
     </main>
 
-    <!-- Trust Footer -->
-    <footer class="bg-emerald-950 text-emerald-100/40 py-16 px-6 mt-12">
-        <div class="max-w-4xl mx-auto">
-            <div class="flex flex-col items-center space-y-8">
-                <div class="flex items-center space-x-2 grayscale opacity-50">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                    <span class="text-xs font-bold uppercase tracking-[0.2em]">Secure Application Portal</span>
-                </div>
-                
-                <p class="text-xs text-center leading-relaxed max-w-2xl">
-                    &copy; 2026 Customer Rewards Initiative. This website is not affiliated with, maintained, authorized, endorsed or sponsored by Trader Joe's or any of its affiliates. Trader Joe's is a registered trademark of its respective owner. All logos and trademarks belong to their respective owners and are used here for identification purposes only.
-                </p>
-
-                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-widest">
-                    <a href="#" class="hover:text-emerald-100 transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-emerald-100 transition-colors">Terms of Service</a>
-                    <a href="#" class="hover:text-emerald-100 transition-colors">Accessibility</a>
-                    <a href="#" class="hover:text-emerald-100 transition-colors">Contact Support</a>
-                </div>
+    <!-- Footer -->
+    <footer class="py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 text-[11px] font-bold text-gray-400 uppercase tracking-widest">
+                <a href="#" class="hover:text-costco-blue">Privacy</a>
+                <a href="#" class="hover:text-costco-blue">Terms</a>
+                <a href="#" class="hover:text-costco-blue">Support</a>
             </div>
         </div>
     </footer>
-    
-    <script>
-        // Simple logic to add a "Just claimed" notification for social proof
-        const names = ["Sarah", "Michael", "David", "Jessica", "James", "Emily"];
-        const cities = ["Chicago", "Austin", "Portland", "Boston", "Denver"];
-        
-        function showNotification() {
-            const name = names[Math.floor(Math.random() * names.length)];
-            const city = cities[Math.floor(Math.random() * cities.length)];
-            
-            const toast = document.createElement('div');
-            toast.className = 'fixed bottom-6 left-6 bg-white shadow-2xl rounded-2xl p-4 flex items-center space-x-3 border border-emerald-50 z-50 transform translate-y-20 transition-all duration-500 opacity-0';
-            toast.innerHTML = `
-                <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 text-xs font-bold">
-                    ${name[0]}
-                </div>
-                <div>
-                    <p class="text-[10px] font-bold text-emerald-950">${name} from ${city}</p>
-                    <p class="text-[9px] text-emerald-600">Just qualified for a reward!</p>
-                </div>
-            `;
-            
-            document.body.appendChild(toast);
-            
-            setTimeout(() => {
-                toast.classList.remove('translate-y-20', 'opacity-0');
-            }, 100);
-            
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-                setTimeout(() => toast.remove(), 500);
-            }, 5000);
-        }
-
-        // Start random notifications after 3 seconds
-        setTimeout(() => {
-            showNotification();
-            setInterval(showNotification, 12000);
-        }, 3000);
-    </script>
 </body>
 </html>
